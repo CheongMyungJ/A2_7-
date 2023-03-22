@@ -1,4 +1,6 @@
-public class User {
+import java.util.List;
+
+public class User{
     private int Age;
     private String Name;
     private int Experience;
