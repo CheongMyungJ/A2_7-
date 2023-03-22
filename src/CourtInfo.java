@@ -5,6 +5,7 @@ public class CourtInfo {
     private String name;
     private Date time;
     private Boolean booking;
+    private User user;
 
     String getArea() {return area;}
     void setArea(String area) {this.area = area;}
@@ -14,4 +15,6 @@ public class CourtInfo {
     void setTime(Date time) {this.time = time;}
     Boolean getBooking() {return booking;}
     void setBooking(Boolean booking) {this.booking = booking;}
+    User getUser() {return user;}
+    void setUser(User user) {this.user = user;}
 }
