@@ -10,4 +10,12 @@ public class User{
     public void sendMessage() {
     	System.out.println("Match is made");
     }
+    
+    public void AgreeMatch() {
+    	MatchingSystem.getInstance().DeletePost(this);
+    }
+    
+    public void DenyMatch() {
+    	
+    }
 }
