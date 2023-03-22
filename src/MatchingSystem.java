@@ -2,7 +2,8 @@ import java.util.List;
 
 public class MatchingSystem {
 	static MatchingSystem instance = null;
-	private MatchingSystem() {}
+	private MatchingSystem() {
+	}
 	public static MatchingSystem getInstance() {
 		if (instance != null)
 			return instance;
@@ -21,9 +22,10 @@ public class MatchingSystem {
     	return false;
     }
 
-    public Boolean Join(Participant p){
-        return null;
+    public void Join(CollectInfo info, Participant u){
+    	info.Add(u);
     }
+      
 
     public List<CollectInfo> ShowPost(){
     	for(int i = 0; i < Post.size(); i++)
@@ -42,8 +44,19 @@ public class MatchingSystem {
         return null;
     }
 
-    public void CancelMatch(CollectInfo info){
-    	info.remove();
+    public void CancelMatch(User u){
+    	CollectInfo temp = null;
+    	for(int i = 0; i < Post.size(); i++)
+    	{
+    		temp = Post.get(i);
+    		for(int j = 0; j < temp.getParticipant().size(); j++)
+    		{
+    		if(temp.getParticipant().get(0) == u)
+    		{
+    			Post.remove(i);
+    		    break;	
+    		}
+    	}
     }
 
     public void AlramMatch(List<User> user){
@@ -53,11 +66,21 @@ public class MatchingSystem {
     	}
     }
 
-    public void DeletePost(CollectInfo info){
+    public void DeletePost(User u){
+    	CollectInfo temp = null;
+    	for(int i = 0; i < Post.size(); i++)
+    	{
+    		temp = Post.get(i);
+    		if(temp.getParticipant().get(0) == u)
+    		{
+    			Post.remove(i);
+    		    break;	
+    		}
+    	}
     }
     
     public void DoneMatching(CollectInfo info) {
     	AlramMatch(info.getParticipant());    	
-    }
+    }   
 
 }

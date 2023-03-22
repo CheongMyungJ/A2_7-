@@ -20,6 +20,11 @@ public class CollectInfo {
     public void show()
     {
     	System.out.printf("%s", title);
+    	System.out.println();
+    }
+    
+    public void SetValid(Boolean bool) {
+    	this.valid = bool;
     }
     
     public Boolean CheckValid()
@@ -30,7 +35,7 @@ public class CollectInfo {
     public void Add(Participant p)
     {
     	P.add(p);
-    	CurNumOfPerson++;
+    	this.CurNumOfPerson++;
     	
     	if(this.NumOfPerson == this.CurNumOfPerson)
     	{
