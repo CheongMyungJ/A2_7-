@@ -33,11 +33,18 @@ public class CourtBookingSystem {
     	List<CourtInfo> curCourtList = courMgmtSys.getCourtList();
     	for (CourtInfo info : curCourtList) {
     		if (info.getArea() == c.getArea() && info.getTime() == c.getTime()e){
-    			return false;
+    			if(info.getBooking() == true) { 
+    				return false; 
+    			}
+    			else {
+    				info.setBooking((true);
+    				return true;
+    			}
     		}
     	}
-    	courMgmtSys.addCourtInfo(c);
-    	return true;
+    	
+    	// not exist court
+    	return false;
     }
 
     public CourtInfo CheckBooking(Participant p){

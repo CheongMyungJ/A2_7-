@@ -18,8 +18,4 @@ public class CourtManageSystem {
     public CourtInfo getCourtList(Participant p){
         return null;
     }
-    
-    public void addCourtInfo(CourtInfo c) {
-    	CourtList.add(c);
-    }
 }
