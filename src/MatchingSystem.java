@@ -26,6 +26,14 @@ public class MatchingSystem {
     }
 
     public List<CollectInfo> ShowPost(){
+    	for(int i = 0; i < Post.size(); i++)
+    	{
+    		CollectInfo temp = Post.get(i);
+    		if(temp.CheckValid())
+    		{
+    			temp.show();
+    		}
+    	}
     	return Post;
     }
 
@@ -34,13 +42,22 @@ public class MatchingSystem {
         return null;
     }
 
-    public void CancelMatch(){
+    public void CancelMatch(CollectInfo info){
+    	info.remove();
     }
 
-    public void AlramMatch(){
+    public void AlramMatch(List<User> user){
+    	for(int i = 0; i < user.size(); i++)
+    	{
+    		user.get(i).sendMessage();
+    	}
     }
 
-    public void DeletePost(){
+    public void DeletePost(CollectInfo info){
+    }
+    
+    public void DoneMatching(CollectInfo info) {
+    	AlramMatch(info.getParticipant());    	
     }
 
 }

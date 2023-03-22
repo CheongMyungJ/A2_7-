@@ -35,12 +35,12 @@ public class CourtManageSystem {
     				return rInfo;
     			}
     			else {
-    				System.out.println("¿¹¾àÀÚ¿Í ¿¹¾àÇöÈ² ºÒÀÏÄ¡ Error");
+    				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È² ï¿½ï¿½ï¿½ï¿½Ä¡ Error");
     				return null;
     			}
     		}
     	}
-    	System.out.println("¿¹¾àµÈ ÄÚÆ®°¡ ¾ø½À´Ï´Ù. Error");
+    	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½. Error");
         return null;
     }
 }
