@@ -7,4 +7,7 @@ public class User{
     private String LivingArea;
     private List<String> InterestArea;
 
+    public void sendMessage() {
+    	System.out.println("Match is made");
+    }
 }
