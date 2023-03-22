@@ -29,11 +29,6 @@ public class CourtBookingSystem {
     }
 
     public Boolean Booking(CourtInfo c){
-        return null;
+        return CourtManageSystem.getInstance().booking(c);
     }
-
-    public CourtInfo CheckBooking(Participant p){
-        return null;
-    }
-
 }
