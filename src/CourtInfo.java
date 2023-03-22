@@ -1,7 +1,7 @@
 public class CourtInfo {
-    private String 지역;
-    private String 코트명;
-    private Date 시간;
-    private Bool 예약여부;
+    private String Area;
+    private String name;
+    private Date time;
+    private Bool Booking;
 
 }

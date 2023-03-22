@@ -1,26 +1,26 @@
-public class 코트예약시스템 {
-	static 코트예약시스템 instance = null;
-	private 코트예약시스템() {}
-	public static 코트예약시스템 getInstance() {
+public class CourtBookingSystem {
+	static CourtBookingSystem instance = null;
+	private CourtBookingSystem() {}
+	public static CourtBookingSystem getInstance() {
 		if (instance != null)
 			return instance;
-		instance = new 코트예약시스템();
+		instance = new CourtBookingSystem();
 		return instance;
 	}
 	
 	
-    public void 조건선택화면제공(){
+    public void ShowSelectInfo(){
     }
 
-    public List<CourtInfo> 예약현황화면제공(){
+    public List<CourtInfo> ShowBookingInfo(){
         return null;
     }
 
-    public Bool 예약하기(CourtInfo 코트){
+    public Bool Booking(CourtInfo c){
         return null;
     }
 
-    public CourtInfo 예약정보확인(모집자 예약자){
+    public CourtInfo CheckBooking(Participant p){
         return null;
     }
 

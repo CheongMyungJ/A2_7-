@@ -1,11 +1,11 @@
-public class 코트관리시스템 {
-    private List<CourtInfo> 코트현황리스트;
+public class CourtManageSystem {
+    private List<CourtInfo> CourtList;
 
-    public List<CourtInfo> 코트현황가져오기(){
+    public List<CourtInfo> getCourtList(){
         return null;
     }
 
-    public CourtInfo 코트현황가져오기(모집자 예약자){
+    public CourtInfo getCourtList(Participant p){
         return null;
     }
 

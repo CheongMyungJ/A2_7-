@@ -1,3 +1,3 @@
-public class 참여자 extends 유저 {
+public class Participant extends User {
 
 }

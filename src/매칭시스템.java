@@ -1,46 +1,46 @@
 import java.util.List;
 
-public class 매칭시스템 {
-	static 매칭시스템 instance = null;
-	private 매칭시스템() {}
-	public static 매칭시스템 getInstance() {
+public class MatchingSystem {
+	static MatchingSystem instance = null;
+	private MatchingSystem() {}
+	public static MatchingSystem getInstance() {
 		if (instance != null)
 			return instance;
-		instance = new 매칭시스템();
+		instance = new MatchingSystem();
 		return instance;
 	}
 	
 	
-    private List<CollectInfo> 공고글정보;
+    private List<CollectInfo> Post;
 
-    public Boolean 공고하기(CollectInfo 제한정보){
-    	if (공고정보유효성체크(제한정보)) {
-    		공고글정보.add(제한정보);
+    public Boolean Posting(CollectInfo LimitInfo){
+    	if (CheckPostValidation(LimitInfo)) {
+    		Post.add(LimitInfo);
     		return true;
     	}
     	return false;
     }
 
-    public Boolean 참여하기(참여자 참가자){
+    public Boolean Join(Participant p){
         return null;
     }
 
-    public List<CollectInfo> 공고목록화면제공(){
-    	return 공고글정보;
+    public List<CollectInfo> ShowPost(){
+    	return Post;
     }
 
-    public Boolean 공고정보유효성체크(CollectInfo 제한정보) {
-    	코트예약시스템.getInstance().예약정보확인(제한정보.예약자가져오기());
+    public Boolean CheckPostValidation(CollectInfo LimitInfo) {
+    	CourtBookingSystem.getInstance().CheckBooking(LimitInfo.getSubscriber());
         return null;
     }
 
-    public void 참여취소하기(){
+    public void CancelMatch(){
     }
 
-    public void 매칭성사알람(){
+    public void AlramMatch(){
     }
 
-    public void 공고글삭제(){
+    public void DeletePost(){
     }
 
 }
