@@ -14,7 +14,7 @@ public class CourtBookingSystem {
 	
 	
     public void ShowSelectInfo(){
-    	System.out.println("Á¶°Ç ¼±ÅÃ È­¸éÀ» º¸¿©ÁØ´Ù. (Áö¿ªÀº ÅØ½ºÆ® ÀÔ·ÂÃ¢°ú ¼±ÅÃ¹Ú½º·Î, ½Ã°£Àº Ä¶¸°´õ·Î)");
+    	System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½. (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ø½ï¿½Æ® ï¿½Ô·ï¿½Ã¢ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¹Ú½ï¿½ï¿½ï¿½, ï¿½Ã°ï¿½ï¿½ï¿½ Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)");
     }
 
     public List<CourtInfo> ShowBookingInfo(String selectedArea, Date selectedTime){
@@ -29,7 +29,15 @@ public class CourtBookingSystem {
     }
 
     public Boolean Booking(CourtInfo c){
-        return null;
+    	CourtManageSystem courMgmtSys = CourtManageSystem.getInstance();
+    	List<CourtInfo> curCourtList = courMgmtSys.getCourtList();
+    	for (CourtInfo info : curCourtList) {
+    		if (info.getArea() == c.getArea() && info.getTime() == c.getTime()e){
+    			return false;
+    		}
+    	}
+    	courMgmtSys.addCourtInfo(c);
+    	return true;
     }
 
     public CourtInfo CheckBooking(Participant p){
